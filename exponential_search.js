@@ -7,7 +7,7 @@ function exponentialSearch(array, key) {
 	while(bound < size && array[bound] < key) { 
 		bound *= 2;
 	}
-	return binarySearch(array, key, parseInt(bound/2), min(parseInt(bound), size));
+	return binarySearch(array, key, Math.floor(bound/2), min(Math.floor(bound), size));
 }
 
 function binarySearch(array, key, low, high) {
